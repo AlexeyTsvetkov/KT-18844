@@ -1,0 +1,25 @@
+buildscript {
+    ext.kotlin_version = '1.1.3'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}
+
+
